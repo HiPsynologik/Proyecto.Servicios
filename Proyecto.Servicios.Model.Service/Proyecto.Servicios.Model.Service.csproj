@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Request\UsuarioFilterRequest.cs" />
     <Compile Include="Response\UsuarioFilterResponse.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -67,8 +68,16 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Request\" />
+    <ProjectReference Include="..\Proyecto.Servicios.Model\Proyecto.Servicios.Model.csproj">
+      <Project>{882925d5-fb10-47d0-b80e-953fe9c48f27}</Project>
+      <Name>Proyecto.Servicios.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Proyecto.Servicios.Shared\Proyecto.Servicios.Shared.csproj">
+      <Project>{16289b29-4a30-4fa4-a902-d73678be4e78}</Project>
+      <Name>Proyecto.Servicios.Shared</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

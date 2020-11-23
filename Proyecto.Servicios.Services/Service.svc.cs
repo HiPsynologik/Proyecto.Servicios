@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.ServiceModel.Web;
-using System.Text;
+﻿using Proyecto.Servicios.Model.Service.Request;
+using Proyecto.Servicios.Model.Service.Response;
+using System;
 
 namespace Proyecto.Servicios.Services
 {
@@ -14,18 +10,11 @@ namespace Proyecto.Servicios.Services
         {
             return string.Format("You entered: {0}", value);
         }
-
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
+        public UsuarioFilterResponse ObtenerUsuario(UsuarioFilterRequest request)
         {
-            if (composite == null)
-            {
-                throw new ArgumentNullException("composite");
-            }
-            if (composite.BoolValue)
-            {
-                composite.StringValue += "Suffix";
-            }
-            return composite;
+            UsuarioFilterResponse response = new UsuarioFilterResponse();
+
+            return response;
         }
     }
 }

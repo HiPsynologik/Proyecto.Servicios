@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Proyecto.Servicios.Shared.ModelService;
+﻿using Proyecto.Servicios.Shared.ModelService;
+using Proyecto.Servicios.Model.ViewModels;
 
 namespace Proyecto.Servicios.Model.Service.Response
 {
-    public class UsuarioFilterResponse : FilterResponseBase<>
+    public class UsuarioFilterResponse : FilterResponseBase<Usuarios>
     {
     }
 }
