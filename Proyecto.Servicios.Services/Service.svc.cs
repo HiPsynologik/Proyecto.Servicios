@@ -6,13 +6,10 @@ namespace Proyecto.Servicios.Services
 {
     public class Service : IService
     {
-        public string GetData(int value)
-        {
-            return string.Format("You entered: {0}", value);
-        }
         public UsuarioFilterResponse ObtenerUsuario(UsuarioFilterRequest request)
         {
             UsuarioFilterResponse response = new UsuarioFilterResponse();
+
 
             return response;
         }

@@ -4,29 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{16289B29-4A30-4FA4-A902-D73678BE4E78}</ProjectGuid>
+    <ProjectGuid>{465F9977-CA6D-4B21-9C3F-609434D6D0D8}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Proyecto.Servicios.Shared</RootNamespace>
-    <AssemblyName>Proyecto.Servicios.Shared</AssemblyName>
+    <RootNamespace>Proyecto.Servicios.Domain</RootNamespace>
+    <AssemblyName>Proyecto.Servicios.Domain</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <PublishUrl>publish\</PublishUrl>
-    <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
-    <UpdateInterval>7</UpdateInterval>
-    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
-    <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <UseApplicationTrust>false</UseApplicationTrust>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -53,7 +38,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -65,24 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\ControllerBase.cs" />
-    <Compile Include="DbServer\DbParameterItem.cs" />
-    <Compile Include="DbServer\SqlDbHelper.cs" />
-    <Compile Include="ModelService\EmptyRequest.cs" />
-    <Compile Include="ModelService\EmptyResponse.cs" />
-    <Compile Include="ModelService\FilterRequestBase.cs" />
-    <Compile Include="ModelService\FilterResponseBase.cs" />
-    <Compile Include="ModelService\OperationRequestBase.cs" />
-    <Compile Include="ModelService\OperationResponseBase.cs" />
-    <Compile Include="Models\ErrorMessage.cs" />
-    <Compile Include="Models\Pagination.cs" />
-    <Compile Include="Models\TipoParametro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Resources\EmptyRequest.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EmptyRequest.resx</DependentUpon>
-    </Compile>
+    <Compile Include="UsuarioDomain.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -92,10 +60,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Resources\EmptyRequest.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>EmptyRequest.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -107,16 +71,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
+    <ProjectReference Include="..\Proyecto.Servicios.Model\Proyecto.Servicios.Model.csproj">
+      <Project>{882925d5-fb10-47d0-b80e-953fe9c48f27}</Project>
+      <Name>Proyecto.Servicios.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

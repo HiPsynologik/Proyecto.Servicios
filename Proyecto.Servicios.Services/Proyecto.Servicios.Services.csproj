@@ -17,10 +17,10 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort />
-    <IISExpressAnonymousAuthentication />
-    <IISExpressWindowsAuthentication />
-    <IISExpressUseClassicPipelineMode />
+    <IISExpressSSLPort>44375</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
     <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -65,6 +65,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\UsuarioController.cs" />
     <Compile Include="Service.svc.cs">
       <DependentUpon>Service.svc</DependentUpon>
     </Compile>
@@ -83,10 +84,25 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Proyecto.Servicios.IDomain\Proyecto.Servicios.IDomain.csproj">
+      <Project>{52eb19fb-a4e2-4e1a-b0ec-c36ecf52e681}</Project>
+      <Name>Proyecto.Servicios.IDomain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Proyecto.Servicios.Model.Service\Proyecto.Servicios.Model.Service.csproj">
       <Project>{fd895c09-77dc-4455-ba13-5d1354482cdf}</Project>
       <Name>Proyecto.Servicios.Model.Service</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Proyecto.Servicios.Model\Proyecto.Servicios.Model.csproj">
+      <Project>{882925D5-FB10-47D0-B80E-953FE9C48F27}</Project>
+      <Name>Proyecto.Servicios.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Proyecto.Servicios.Shared\Proyecto.Servicios.Shared.csproj">
+      <Project>{16289b29-4a30-4fa4-a902-d73678be4e78}</Project>
+      <Name>Proyecto.Servicios.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

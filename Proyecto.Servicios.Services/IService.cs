@@ -8,9 +8,6 @@ namespace Proyecto.Servicios.Services
     public interface IService
     {
         [OperationContract]
-        string GetData(int value);
-
-        [OperationContract]
         UsuarioFilterResponse ObtenerUsuario(UsuarioFilterRequest request);
     }
 }
