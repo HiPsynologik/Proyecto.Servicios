@@ -36,6 +36,9 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Proyecto.Base">
+      <HintPath>..\Proyecto.Servicios.Services\References\Proyecto.Base.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -71,6 +74,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Proyecto.Servicios.IRepository\Proyecto.Servicios.IRepository.csproj">
+      <Project>{d9d69fa7-6e78-4aaf-b504-aaf822896123}</Project>
+      <Name>Proyecto.Servicios.IRepository</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Proyecto.Servicios.Model\Proyecto.Servicios.Model.csproj">
       <Project>{882925d5-fb10-47d0-b80e-953fe9c48f27}</Project>
       <Name>Proyecto.Servicios.Model</Name>

@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Proyecto.Servicios.IRepository;
+using Proyecto.Servicios.Model.Filters;
+using Proyecto.Servicios.Model.ViewModels;
+using System;
+using Vitamedica.Base.Factory;
 
 namespace Proyecto.Servicios.Domain
 {
@@ -13,6 +13,15 @@ namespace Proyecto.Servicios.Domain
             GC.SuppressFinalize(this);
         }
 
+        Usuarios ObtenerUsuario(UsuarioFilter request)
+        {
+            Usuarios result = new Usuarios();
+            using (IUsuarioRepository Repository = FactoryEngine<IUsuarioRepository>.GetInstance("IUsuarioRepository"))
+            {
+                result = Repository.ObtenerUsuario(request);
+            }
 
+            return result;
+        }
     }
 }

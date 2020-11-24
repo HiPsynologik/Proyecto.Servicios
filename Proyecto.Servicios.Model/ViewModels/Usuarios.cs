@@ -7,7 +7,7 @@ namespace Proyecto.Servicios.Model.ViewModels
     public class Usuarios
     {
         [DataMember]
-        public int Id_Usuarios { get; set; }
+        public int Id_Usuario { get; set; }
 
         [DataMember]
         public string UserName { get; set; }

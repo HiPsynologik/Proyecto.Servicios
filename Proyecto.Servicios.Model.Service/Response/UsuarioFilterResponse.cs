@@ -3,7 +3,7 @@ using Proyecto.Servicios.Model.ViewModels;
 
 namespace Proyecto.Servicios.Model.Service.Response
 {
-    public class UsuarioFilterResponse : FilterResponseBase<Usuarios>
+    public class UsuarioFilterResponse : OperationResponseBase<Usuarios>
     {
     }
 }

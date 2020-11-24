@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{52EB19FB-A4E2-4E1A-B0EC-C36ECF52E681}</ProjectGuid>
+    <ProjectGuid>{8172A544-8560-48EE-9DC1-C61962E9D62F}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Proyecto.Servicios.IDomain</RootNamespace>
-    <AssemblyName>Proyecto.Servicios.IDomain</AssemblyName>
+    <RootNamespace>Proyecto.Servicios.Repository</RootNamespace>
+    <AssemblyName>Proyecto.Servicios.Repository</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -49,8 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IUsuarioDomain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsuarioRepository.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -71,13 +71,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Proyecto.Servicios.Model.Service\Proyecto.Servicios.Model.Service.csproj">
-      <Project>{fd895c09-77dc-4455-ba13-5d1354482cdf}</Project>
-      <Name>Proyecto.Servicios.Model.Service</Name>
+    <ProjectReference Include="..\Proyecto.Servicios.IRepository\Proyecto.Servicios.IRepository.csproj">
+      <Project>{d9d69fa7-6e78-4aaf-b504-aaf822896123}</Project>
+      <Name>Proyecto.Servicios.IRepository</Name>
     </ProjectReference>
     <ProjectReference Include="..\Proyecto.Servicios.Model\Proyecto.Servicios.Model.csproj">
       <Project>{882925d5-fb10-47d0-b80e-953fe9c48f27}</Project>
       <Name>Proyecto.Servicios.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Proyecto.Servicios.Shared\Proyecto.Servicios.Shared.csproj">
+      <Project>{16289b29-4a30-4fa4-a902-d73678be4e78}</Project>
+      <Name>Proyecto.Servicios.Shared</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
